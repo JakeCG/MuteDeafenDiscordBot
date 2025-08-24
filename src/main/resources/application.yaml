@@ -1,0 +1,50 @@
+discord:
+  bot:
+    token: ${DISCORD_TOKEN}
+    announcement-channel: bot-deafen-updates
+    announcements:
+      mute: true
+      deafen: true
+      include-bots: false
+      use-nicknames: true
+    spam-prevention:
+      cooldown: PT3S
+      max-announcements-per-minute: 20
+      enable-rate-limit: false
+    messages:
+      mute-templates:
+        - "🤫 **{user}** has gone silent!"
+        - "🎤❌ **{user}** dropped the mic!"
+        - "🔇 **{user}** is now in stealth mode!"
+      unmute-templates:
+        - "🎤 **{user}** is back on the mic!"
+        - "🔊 **{user}** has returned to the conversation!"
+        - "💬 **{user}** is ready to speak again!"
+      deafen-templates:
+        - "👂❌ **{user}** has entered their own world!"
+        - "🔇 **{user}** is now in the zone!"
+        - "🎧 **{user}** tuned out the world!"
+      undeafen-templates:
+        - "👂 **{user}** is back among the living!"
+        - "🔊 **{user}** rejoined reality!"
+        - "🎧❌ **{user}** unplugged from the matrix!"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+
+logging:
+  level:
+    com.jakec.mutediscordbot: DEBUG
+    net.dv8tion.jda: INFO
+
+spring:
+  cache:
+    type: simple
