@@ -308,7 +308,6 @@ private String handleNewCommand(MessageReceivedEvent event) {
 ### Code Style Guidelines
 - Use **Java 21** features when appropriate
 - Follow **Spring Boot** best practices
-- Write **comprehensive tests** for new features
 - Use **descriptive commit messages**
 - Update **documentation** for new features
 
