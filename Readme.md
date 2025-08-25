@@ -293,7 +293,7 @@ public Optional<String> processCommand(String command, MessageReceivedEvent even
 }
 
 private String handleNewCommand(MessageReceivedEvent event) {
-    return "🆕 New command response!";
+    return "New command response!";
 }
 ```
 
